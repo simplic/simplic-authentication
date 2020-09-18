@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.Authentication", "Simplic.Authentication\Simplic.Authentication.csproj", "{EA6BBAEA-01C6-4387-85E5-B17F741F9D53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.Authentication.Service", "Simplic.Authentication.Service\Simplic.Authentication.Service.csproj", "{734C5B50-8B4C-49A8-A15B-BF322A49D37A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.CredentialProvider.ActiveDirectory", "Simplic.CredentialProvider.ActiveDirectory\Simplic.CredentialProvider.ActiveDirectory.csproj", "{1933DB0C-1712-4CF1-8E0E-61875FAE9852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.CredentialProvider.Default", "Simplic.CredentialProvider.Default\Simplic.CredentialProvider.Default.csproj", "{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ENV", "ENV", "{5749EB03-71B9-4B59-A6CF-C4A933AE7FFD}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA6BBAEA-01C6-4387-85E5-B17F741F9D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6BBAEA-01C6-4387-85E5-B17F741F9D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6BBAEA-01C6-4387-85E5-B17F741F9D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6BBAEA-01C6-4387-85E5-B17F741F9D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{734C5B50-8B4C-49A8-A15B-BF322A49D37A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734C5B50-8B4C-49A8-A15B-BF322A49D37A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734C5B50-8B4C-49A8-A15B-BF322A49D37A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734C5B50-8B4C-49A8-A15B-BF322A49D37A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1933DB0C-1712-4CF1-8E0E-61875FAE9852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1933DB0C-1712-4CF1-8E0E-61875FAE9852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1933DB0C-1712-4CF1-8E0E-61875FAE9852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1933DB0C-1712-4CF1-8E0E-61875FAE9852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E62F00EA-E2D1-4B87-958B-62C557EA69A3}
+	EndGlobalSection
+EndGlobal
