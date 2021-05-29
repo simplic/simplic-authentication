@@ -13,8 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.CredentialProvider.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ENV", "ENV", "{5749EB03-71B9-4B59-A6CF-C4A933AE7FFD}"
 	ProjectSection(SolutionItems) = preProject
-		azure-pipelines.yml = azure-pipelines.yml
+		..\azure-pipelines.yml = ..\azure-pipelines.yml
+		..\documentation_config.json = ..\documentation_config.json
+		..\release-notes.xml = ..\release-notes.xml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.Authentication.UI", "Simplic.Authentication.UI\Simplic.Authentication.UI.csproj", "{60B11C79-6BFF-4BD9-9805-5814AC5A8508}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +42,10 @@ Global
 		{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BEC93E3-E57F-4F7D-B34F-B0AB5508A67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60B11C79-6BFF-4BD9-9805-5814AC5A8508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60B11C79-6BFF-4BD9-9805-5814AC5A8508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60B11C79-6BFF-4BD9-9805-5814AC5A8508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60B11C79-6BFF-4BD9-9805-5814AC5A8508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

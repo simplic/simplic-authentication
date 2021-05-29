@@ -12,9 +12,14 @@ pr:
     include:
       - "*"
 pool:
-  vmImage: windows-latest
+  vmImage: "windows-latest"
+
 variables:
-  buildConfiguration: Release
+- group: simplic-deployment
+- group: simplic-deployment-dev01
+- name: buildConfiguration
+  value: "Release"
+
 resources:
   repositories:
     - repository: infrastructure
@@ -36,25 +41,15 @@ steps:
     inputs:
       solution: "**/*.sln"
       configuration: $(buildConfiguration)
+
   - ${{ if not(eq(variables['Build.Reason'], 'PullRequest')) }}:
-      - template: version-number-update-template.yml@infrastructure
+      - template: version-number-update-token-template.yml@infrastructure
         parameters:
           connection_string: $(connection_string)
           git_user: $(git_user)
-          git_pass: $(git_pass)
-          branch_name:
-            ${{ replace(variables['Build.SourceBranch'], 'refs/heads/', '')
-            }}
-  - task: VSTest@2
-    inputs:
-      testSelector: testAssemblies
-      testAssemblyVer2: '**\Simplic.authentication.Test.dll
+          git_token: $(git_token)
+          branch_name: ${{ replace(variables['Build.SourceBranch'], 'refs/heads/', '') }}
 
-        !**\*TestAdapter.dll
-
-        !**\obj\**
-
-        '
   - task: NuGetCommand@2
     inputs:
       command: pack
