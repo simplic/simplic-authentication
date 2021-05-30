@@ -1,0 +1,71 @@
+﻿<Window x:Class="Simplic.Authentication.UI.LoginWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="Simplic Studio 2021 | SIMPLIC GmbH"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" WindowStartupLocation="CenterScreen"
+             xmlns:local="clr-namespace:Simplic.Authentication.UI" ResizeMode="NoResize"
+             xmlns:simplic="http://schemas.simplic-systems.com/2016/xaml/presentation"
+             mc:Ignorable="d" Width="600" Height="395"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Height="82" Margin="0,25,0,15" HorizontalAlignment="Center" Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2">
+            <Image Source="/Simplic.Authentication.UI;component/Resources/Images/dms.png" />
+            <Image Source="/Simplic.Authentication.UI;component/Resources/Images/crm.png" Margin="25,0,0,0" />
+            <Image Source="/Simplic.Authentication.UI;component/Resources/Images/apps.png" Margin="25,0,0,0" />
+            <Image Source="/Simplic.Authentication.UI;component/Resources/Images/logistic.png" Margin="25,0,0,0" />
+            <Image Source="/Simplic.Authentication.UI;component/Resources/Images/erp.png" Margin="25,0,0,0" />
+            <Image Source="/Simplic.Authentication.UI;component/Resources/Images/plus.png" Margin="25,0,0,0" />
+        </StackPanel>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="{Binding UserNameLabel}" />
+        <simplic:TextBox x:Name="userTextBox" Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="{Binding PasswordLabel}" />
+        <PasswordBox x:Name="passwordBox" Grid.Row="2" Grid.Column="1" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Height="26" Margin="2" HorizontalAlignment="Stretch" />
+
+        <Label Grid.Row="3" Grid.Column="0" Content="{Binding DomainLabel}" />
+        <simplic:TextBox Text="{Binding Domain, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="1" />
+
+        <Label Grid.Row="4" Grid.Column="0" Content="{Binding DatabaseLabel}" />
+        <simplic:ComboBox DisplayMemberPath="DisplayName" ItemsSource="{Binding Sections}" SelectedItem="{Binding SelectedSection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Width="250">
+
+        </simplic:ComboBox>
+
+        <simplic:CheckBox HorizontalAlignment="Left" IsChecked="{Binding RememberMe, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="1" Content="{Binding RememberMeLabel}" />
+        
+        <Label Grid.Row="5" Grid.Column="0" Content="{Binding LanguageLabel}" />
+        <simplic:ComboBox ItemsSource="{Binding Languages}" SelectedItem="{Binding SelectedLanguage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" Width="250">
+            <simplic:ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Image}" VerticalAlignment="Center" Height="24" />
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Margin="3,0,0,0" Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </simplic:ComboBox.ItemTemplate>
+        </simplic:ComboBox>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right">
+            <Button Click="LoginClickEventHandler" Width="100" Content="{Binding LoginLabel}" Height="26" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Margin="2" />
+            <Button Click="CancelClickEventHandler" Width="100" Content="{Binding CancelLabel}" Height="26" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Margin="2" />
+        </StackPanel>
+
+        <Label Grid.Row="8" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Content="{Binding LoginFooter}" FontSize="10" />
+    </Grid>
+</Window>
