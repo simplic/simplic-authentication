@@ -75,10 +75,6 @@ namespace Simplic.Authentication.UI
             selectedLanguage = languages.FirstOrDefault();
 
             userName = Environment.UserName;
-
-#if DEBUG
-            userName = "SuperUser";
-#endif
         }
 
         /// <summary>

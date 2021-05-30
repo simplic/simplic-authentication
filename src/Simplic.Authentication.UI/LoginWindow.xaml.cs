@@ -100,10 +100,6 @@ namespace Simplic.Authentication.UI
                     e.Handled = true;
                 }
             };
-
-#if DEBUG            
-            passwordBox.Password = "capreolus";
-#endif
         }
 
         /// <summary>
